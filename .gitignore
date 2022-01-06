@@ -1,0 +1,9 @@
+# submodules
+3d_engine/*
+W3D_Reader/*
+
+# Qt Creator
+*.user
+
+# thirdparty include 
+include/*

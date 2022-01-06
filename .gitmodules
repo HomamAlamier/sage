@@ -1,0 +1,3 @@
+[submodule "W3D_Reader"]
+	path = W3D_Reader
+	url = https://github.com/HomamAlamier/W3D_Reader
