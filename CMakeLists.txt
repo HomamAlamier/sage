@@ -18,3 +18,6 @@ target_link_libraries(test_w3d_reader w3d_reader)
 
 add_executable(test_3d_engine "tests/3d_engine.cpp")
 target_link_libraries(test_3d_engine 3d_engine)
+
+add_custom_command(TARGET test_3d_engine POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/tests/data/shaders ${CMAKE_CURRENT_BINARY_DIR}/shaders)

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
-
+#include <iostream>
 #define LOG_CHANNELS 100
 #define LOG_FORMAT "[%s] (%s) %s@%s : %s\n"
 #define LOGGER(CH_NAME, TAG) \
@@ -70,6 +70,9 @@ private:
         int sz = sprintf(buffer, LOG_FORMAT,
                          dateTimeToString().c_str(),
                          o, t, c.name.c_str(), textBuffer);
+
+        std::cout << buffer;
+        std::cout.flush();
 
         st->write(buffer, sz);
         st->flush();
