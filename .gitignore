@@ -1,6 +1,6 @@
 # submodules
-3d_engine/*
-W3D_Reader/*
+#3d_engine/*
+#W3D_Reader/*
 
 # Qt Creator
 *.user
