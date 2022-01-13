@@ -11,3 +11,7 @@ file(GLOB SRC_DIR "src/*.cpp")
 file(GLOB INCLUDE_DIR "include/*.h" "include/*/*.hpp" "include/*/*.h")
 add_library(logger ${SRC_DIR} ${INCLUDE_DIR})
 
+if (WIN32)
+    set_property(TARGET logger PROPERTY
+      MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif(WIN32)

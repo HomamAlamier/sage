@@ -10,7 +10,7 @@ int main()
 {
     w3d::W3D_Model mdl("test.W3D");
     if (mdl.loaded())
-        mdl.hierarchy()->print();
+        mdl.hierarchy().print();
     return 0;
 }
 

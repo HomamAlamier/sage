@@ -46,11 +46,11 @@ int Logger::regChannel(const std::string &name, const std::string& logFile)
     if (i != -1)
         return i;
     LogChannel c;
-    c.name = "Main";
+    c.name = name;
     c.file = logFile;
     c.stream = new std::fstream(logFile, std::ios::out);
     _channels.push_back(c);
-    return _channels.size();
+    return _channels.size() - 1;
 }
 
 std::string Logger::dateTimeToString()
